@@ -1,0 +1,9 @@
+<Page loaded="pageLoaded">
+    <ActionBar title="Create an account" class="action-bar"/>
+    <StackLayout orientation="vertical">
+        <Image src="res://icon"/>
+        <TextField autocorrect="false" id="email" hint="Email" keyboardType="email"/>
+        <TextField autocorrect="false" id="password" hint="Password" keyboardType="email" secure="true"/>
+        <Button text="Registrate" tap="createAnAccount"/>
+    </StackLayout>
+</Page>

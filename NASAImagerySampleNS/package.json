@@ -1,0 +1,25 @@
+{
+	"description": "NativeScript Application",
+	"license": "MIT 2.0",
+	"readme": "NativeScript Application",
+	"repository": "https://github.com/JGeraldoLima/pos-facisa-nativescript",
+	"nativescript": {
+		"id": "br.com.ns.nasaimagerysample.jgeraldo",
+		"tns-android": {
+			"version": "3.3.1"
+		}
+	},
+	"dependencies": {
+		"email-validator": "^1.1.1",
+		"nativescript-plugin-firebase": "^4.2.1",
+		"nativescript-social-share": "^1.5.0",
+		"nativescript-theme-core": "~1.0.4",
+		"tns-core-modules": "~3.1.0"
+	},
+	"devDependencies": {
+		"babel-traverse": "6.4.5",
+		"babel-types": "6.4.5",
+		"babylon": "6.4.5",
+		"lazy": "1.0.11"
+	}
+}

@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "15926865683",
+    "firebase_url": "https://nasa-imagery-sample.firebaseio.com",
+    "project_id": "nasa-imagery-sample",
+    "storage_bucket": "nasa-imagery-sample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15926865683:android:97e006ad3521b7ce",
+        "android_client_info": {
+          "package_name": "br.com.nasaimagerysample.jgeraldo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15926865683-lddot1q0uusenev4jvt8h1ck4l3jsibg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ1y3tp7MLS1Cj_QlAsQE0BDSVfeK-Cuk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15926865683:android:87e897774a62a0de",
+        "android_client_info": {
+          "package_name": "br.com.ns.nasaimagerysample.jgeraldo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15926865683-51u25pjo1b9pkr4h9imdmk7030cnchhe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ns.nasaimagerysample.jgeraldo",
+            "certificate_hash": "723c7f5efa0de67fe60f32a10cb215bb96aee19c"
+          }
+        },
+        {
+          "client_id": "15926865683-fpke2p3le7nq4fgu3bomncvdivaiu1pp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ns.nasaimagerysample.jgeraldo",
+            "certificate_hash": "9ac5d42445a8b15e7465f27b1e8fa3d6dd416f2f"
+          }
+        },
+        {
+          "client_id": "15926865683-lddot1q0uusenev4jvt8h1ck4l3jsibg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ1y3tp7MLS1Cj_QlAsQE0BDSVfeK-Cuk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15926865683-lddot1q0uusenev4jvt8h1ck4l3jsibg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

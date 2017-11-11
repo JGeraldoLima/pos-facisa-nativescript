@@ -1,0 +1,13 @@
+<Page loaded="pageLoaded">
+    <ActionBar title="Login" class="action-bar"/>
+    <ScrollView>
+        <StackLayout orientation="vertical">
+            <Image src="res://icon" stretch="aspectFit"/>
+            <TextField autocorrect="false" id="email" hint="Email" keyboardType="email"/>
+            <TextField autocorrect="false" id="password" hint="Password" keyboardType="email" secure="true"/>
+            <Button text="Login" tap="login"/>
+            <Label text="or"/>
+            <Button text="Registrate" tap="gotoRegistryPage"/>
+        </StackLayout>
+    </ScrollView>
+</Page>
