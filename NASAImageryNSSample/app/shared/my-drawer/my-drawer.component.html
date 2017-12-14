@@ -13,17 +13,14 @@ Feel free to customize layouts and components to change how your app drawer look
         <StackLayout class="sidedrawer-content">
             <MyDrawerItem title="Home" route="/home" icon="&#xf015;" [isSelected]="isPageSelected('Home')">
             </MyDrawerItem>
-            <MyDrawerItem title="Browse" route="/browse" icon="&#xf1ea;" [isSelected]="isPageSelected('Browse')">
+            <MyDrawerItem title="Favorite images" route="/searchs" icon="&#xf1ea;" [isSelected]="isPageSelected('Searchs')">
             </MyDrawerItem>
-            <MyDrawerItem title="Search" route="/search" icon="&#xf002;" [isSelected]="isPageSelected('Search')">
-            </MyDrawerItem>
-            <MyDrawerItem title="Featured" route="/featured" icon="&#xf005;" [isSelected]="isPageSelected('Featured')">
-            </MyDrawerItem>
-
             <StackLayout class="hr-light"></StackLayout>
 
-            <MyDrawerItem title="Settings" route="/settings" icon="&#xf013;" [isSelected]="isPageSelected('Settings')">
-            </MyDrawerItem>
+            <GridLayout columns="auto, *" class="sidedrawer-list-item" (tap)="onSignoutTap()">
+                <Label col="0" [text]="'&#xf08b;'" color="red" class="fa"></Label>
+                <Label col="1" [text]="'Sign out'" color="red" class="p-r-10"></Label>
+            </GridLayout>
         </StackLayout>
     </ScrollView>
 </GridLayout>

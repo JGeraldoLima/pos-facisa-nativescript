@@ -2,16 +2,23 @@ import { Component, OnInit, ViewChild } from "@angular/core";
 import { DrawerTransitionBase, SlideInOnTopTransition } from "nativescript-pro-ui/sidedrawer";
 import { RadSideDrawerComponent } from "nativescript-pro-ui/sidedrawer/angular";
 
+/* ***********************************************************
+* Before you can navigate to this page from your app, you need to reference this page's module in the
+* global app router module. Add the following object to the global array of routes:
+* { path: "Searchs", loadChildren: "./Searchs/Searchs.module#SearchsModule" }
+* Note that this simply points the path to the page module file. If you move the page, you need to update the route too.
+*************************************************************/
+
 @Component({
-    selector: "Settings",
+    selector: "Searchs",
     moduleId: module.id,
-    templateUrl: "./settings.component.html"
+    templateUrl: "./searchs-page.component.html"
 })
-export class SettingsComponent implements OnInit {
+export class SearchsComponent implements OnInit {
     /* ***********************************************************
-    * Use the @ViewChild decorator to get a reference to the drawer component.
-    * It is used in the "onDrawerButtonTap" function below to manipulate the drawer.
-    *************************************************************/
+   * Use the @ViewChild decorator to get a reference to the drawer component.
+   * It is used in the "onDrawerButtonTap" function below to manipulate the drawer.
+   *************************************************************/
     @ViewChild("drawer") drawerComponent: RadSideDrawerComponent;
 
     private _sideDrawerTransition: DrawerTransitionBase;

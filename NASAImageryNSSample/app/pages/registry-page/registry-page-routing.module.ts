@@ -2,14 +2,14 @@ import { NgModule } from "@angular/core";
 import { Routes } from "@angular/router";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { SettingsComponent } from "./settings.component";
+import { RegistryPageComponent } from "./registry-page.component";
 
 const routes: Routes = [
-    { path: "", component: SettingsComponent }
+    { path: "", component: RegistryPageComponent }
 ];
 
 @NgModule({
     imports: [NativeScriptRouterModule.forChild(routes)],
     exports: [NativeScriptRouterModule]
 })
-export class SettingsRoutingModule { }
+export class RegistryPageRoutingModule { }

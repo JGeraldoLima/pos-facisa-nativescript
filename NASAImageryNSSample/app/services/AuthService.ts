@@ -1,13 +1,15 @@
-import { Injectable } from "@angular/core";
+import {Injectable} from "@angular/core";
 import firebase = require("nativescript-plugin-firebase");
 
-import { User } from "../model/User";
+import {RouterExtensions} from "nativescript-angular";
+import * as Toast from "nativescript-toast";
+import {User} from "../model/User";
 
 @Injectable()
 export class AuthService {
     private logged: boolean = false;
 
-    constructor() {
+    constructor(private router: RouterExtensions) {
     }
 
     login(user: User): Promise<any> {
@@ -18,6 +20,17 @@ export class AuthService {
                 password: user.password
             }
         });
+    }
+
+    logout() {
+
+        firebase.logout()
+            .then(() => {
+                this.router.navigate(["/login"], {clearHistory: true});
+            })
+            .catch((err) => {
+                Toast.makeText("An error occurred while trying to logout: " + err, "long").show();
+            });
     }
 
     registrate(user: User): Promise<any> {

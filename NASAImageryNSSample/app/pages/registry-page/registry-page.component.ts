@@ -1,13 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 import { RouterExtensions } from "nativescript-angular";
+import * as Toast from "nativescript-toast";
 import { AuthService } from "../../services/AuthService";
 
 @Component({
-    selector: "LoginPage",
+    selector: "RegistryPage",
     moduleId: module.id,
-    templateUrl: "./login-page.component.html"
+    templateUrl: "./registry-page.component.html"
 })
-export class LoginPageComponent implements OnInit {
+export class RegistryPageComponent implements OnInit {
     email: string;
     password: string;
     isLoading: boolean = false;
@@ -15,30 +16,24 @@ export class LoginPageComponent implements OnInit {
     constructor(private router: RouterExtensions, private auth: AuthService) {
     }
 
-    onSigninButtonTap(): void {
+    ngOnInit(): void {
+    }
+
+    onRegisterButtonTap(): void {
         this.isLoading = true;
-        this.auth.login({email: this.email, password: this.password})
+        this.auth.registrate({email: this.email, password: this.password})
             .then(() => {
                 this.isLoading = false;
-                this.router.navigate(["/home"], {clearHistory: true});
+                Toast.makeText("Registration successful!").show();
+                this.router.navigate(["/login"], {clearHistory: true});
             })
             .catch((error) => {
                 this.isLoading = false;
                 alert({
                     title: "Error",
-                    message: "An error occured trying to login: " + error,
+                    message: "An error occured trying to registrate: " + error,
                     okButtonText: "Ok"
                 });
             });
-    }
-
-    ngOnInit(): void {
-    }
-
-    onRegisterTap(): void {
-        this.router.navigate(["/registry"], {clearHistory: true});
-    }
-
-    onForgotPasswordTap(): void {
     }
 }

@@ -1,12 +1,14 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 
-import { RegistryPageRoutingModule } from "./RegistryPage-routing.module";
-import { RegistryPageComponent } from "./RegistryPage.component";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { RegistryPageRoutingModule } from "./registry-page-routing.module";
+import { RegistryPageComponent } from "./registry-page.component";
 
 @NgModule({
     imports: [
         NativeScriptModule,
+        NativeScriptFormsModule,
         RegistryPageRoutingModule
     ],
     declarations: [
