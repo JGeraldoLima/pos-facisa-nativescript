@@ -33,8 +33,9 @@ it shouldn't have any other siblings other than the <ActionBar> component.
   <!--
   Use the tkMainContent directive to display the content of the page when you have an app drawer.
   -->
-  <GridLayout class="page page-content" tkMainContent>
-    <MapView #mapView [latitude]="latitude" [longitude]="longitude"
+  <GridLayout class="page" tkMainContent cols="*" rows="3*, 2*">
+    <ActivityIndicator busy="{{ isLoading }}"></ActivityIndicator>
+    <MapView row="0" #mapView [latitude]="currentLatitude" [longitude]="currentLongitude"
              [zoom]="zoom" [bearing]="bearing"
              [tilt]="tilt" i-padding="50,50,50,50" [padding]="padding"
              (mapReady)="onMapReady($event)"
@@ -46,5 +47,14 @@ it shouldn't have any other siblings other than the <ActionBar> component.
              (coordinateTapped)="onCoordinateTapped($event)"
              (cameraChanged)="onCameraChanged($event)">
     </MapView>
+    <GridLayout row="1" columns="*, *" rows="*, 2*, *">
+      <Label row="0" text="<<<tutorial>>>" textWrap="true"></Label>
+      <Label col="0" row="1" text="Latitude: {{currentLatitude}}"></Label>
+      <Label col="0" row="1" text="Longitude: {{currentLongitude}}"></Label>
+      <Button col="1" row="1" class="btn btn-primary btn-active" id="getCurrentPosition" text="" (tap)="getCurrentPosition()"></Button>
+
+      <DatePicker col="0" row="2" (loaded)="onPickerLoaded($event)" (dateChange)="onDateChanged($event)" verticalAlignment="center"></DatePicker>
+      <Button col="1" row="2" class="btn btn-primary btn-active" id="searchImage" text="" (tap)="searchImage()"></Button>
+    </GridLayout>
   </GridLayout>
 </RadSideDrawer>
